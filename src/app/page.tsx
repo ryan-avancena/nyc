@@ -6,7 +6,7 @@ const images = [
   "IMG_0084.jpg", "IMG_0085.jpg", "IMG_0086.jpg", "IMG_0088.jpg",
   "IMG_0094.jpg", "IMG_0101.jpg", "IMG_0105.jpg", "IMG_0174.jpg",
   "IMG_0177.jpg", "IMG_9755.jpg", "IMG_9766.jpg", "IMG_9767.jpg",
-  "IMG_9772.jpg", "IMG_9773.jpg", "IMG_9774.jpg", "IMG_9775.jpg",
+  "IMG_9772.jpg", "IMG_9773.jpg", "IMG_9775.jpg",
   "IMG_9776.jpg", "IMG_9779.jpg", "IMG_9785.jpg", "IMG_9788.jpg",
   "IMG_9791.jpg", "IMG_9793.jpg", "IMG_9796.jpg", "IMG_9797.jpg",
   "IMG_9798.jpg", "IMG_9799.jpg", "IMG_9800.jpg", "IMG_9801.jpg",
