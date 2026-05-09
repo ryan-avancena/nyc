@@ -53,7 +53,7 @@ export default function Home() {
   return (
     <main className="h-dvh overflow-y-auto overflow-x-hidden bg-[#ebebeb] relative selection:bg-black selection:text-white">
       <audio ref={audioRef} src="/images/nyc/ambience.m4a" loop />
-      <div className="fixed bottom-8 right-8 z-100 mix-blend-difference text-white font-sans text-xs tracking-widest uppercase flex flex-col items-end gap-3">
+      <div className="fixed bottom-8 left-4 z-100 mix-blend-difference text-white font-sans text-xs tracking-widest uppercase flex flex-col items-end gap-3">
         <div className="flex items-center gap-3 opacity-50 hover:opacity-100 transition-opacity">
           {/* <span>Vol</span> */}
           <input
@@ -122,10 +122,14 @@ export default function Home() {
         </video>
 
         {/* Text overlay */}
-        <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-16 text-white">
-          <h2 className="text-4xl font-serif leading-tight">
-            subway chimes, airpod maxes, wired earbuds, airpods, honking at every single intersection, skyscrapers, scaffolding, pigeons, tweakers, arguments, delivery drivers, people watching
+        <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-16 text-white right-8">
+          <h2 className="text-8xl font-serif italic leading-tight text-right">
+            sonder
           </h2>
+          <p className="text-lg italic tracking-widest mt-2 w-[500px] ml-auto text-right">
+            the profound realization that every random passerby is living a life as vivid, complex,
+            and chaotic as your own, filled with their own ambitions, relationships, and routines.
+          </p>
         </div>
       </div>
     </main>
