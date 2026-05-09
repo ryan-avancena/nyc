@@ -18,7 +18,7 @@ const images = [
   "IMG_9767.jpg", "IMG_9772.jpg", "IMG_9773.jpg", "IMG_9775.jpg",
 
 
-  "IMG_9776.jpg", "IMG_9779.jpg", "IMG_9785.jpg", "IMG_9788.jpg",
+  "IMG_9776.jpg", "IMG_0080.jpg", "IMG_9785.jpg", "IMG_9788.jpg",
   "IMG_9791.jpg", "IMG_9793.jpg", "IMG_9796.jpg", "IMG_9797.jpg",
   "IMG_9798.jpg", "IMG_9799.jpg", "IMG_9800.jpg", "IMG_9801.jpg",
 
@@ -110,6 +110,43 @@ export default function Home() {
 
       <div className="w-full h-dvh overflow-hidden relative">
         {/* Video background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        >
+          <source src="/images/nyc/IMG_9956.mp4" type="video/mp4" />
+        </video>
+
+        {/* <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-16 text-white">
+          <h2 className="text-5xl md:text-7xl font-serif italic leading-tight text-left">
+            statue of liberty.
+          </h2>
+        </div> */}
+      </div>
+
+      <div className="w-full h-dvh overflow-hidden relative">
+        {/* Video background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        >
+          <source src="/images/nyc/IMG_0102.mp4" type="video/mp4" />
+        </video>
+
+        {/* <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-16 text-white">
+          <h2 className="text-5xl md:text-7xl font-serif italic leading-tight text-center">
+            cooper hewitt.
+          </h2>
+        </div> */}
+      </div>
+
+      <div className="w-full h-dvh overflow-hidden relative">
         <video
           autoPlay
           loop
