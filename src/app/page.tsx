@@ -1,4 +1,8 @@
+"use client";
+
 import Image from 'next/image';
+import { useState, useRef, useEffect } from 'react';
+
 
 const images = [
 
@@ -25,8 +29,51 @@ const images = [
 ];
 
 export default function Home() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [volume, setVolume] = useState(0.5);
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = volume;
+    }
+  }, [volume]);
+
+  const toggleAudio = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   return (
     <main className="h-dvh overflow-y-auto overflow-x-hidden bg-[#ebebeb] relative selection:bg-black selection:text-white">
+      <audio ref={audioRef} src="/images/nyc/ambience.m4a" loop />
+      <div className="fixed bottom-8 right-8 z-100 mix-blend-difference text-white font-sans text-xs tracking-widest uppercase flex flex-col items-end gap-3">
+        <div className="flex items-center gap-3 opacity-50 hover:opacity-100 transition-opacity">
+          {/* <span>Vol</span> */}
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+            value={volume}
+            onChange={(e) => setVolume(parseFloat(e.target.value))}
+            className="w-24 h-1 accent-white cursor-pointer bg-white rounded-full appearance-none [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-2 [&::-webkit-slider-thumb]:h-2 [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:rounded-full"
+          />
+        </div>
+        <button
+          onClick={toggleAudio}
+          className="hover:opacity-50 transition-opacity cursor-pointer"
+        >
+          {isPlaying ? "[ Pause Audio ]" : "[ Play Audio ]"}
+        </button>
+      </div>
+
 
       {/* <div className="flex flex-col items-center"> */}
       <div className="fixed inset-0 z-50 pointer-events-none flex flex-col ml-4 mt-4">
@@ -71,7 +118,7 @@ export default function Home() {
           playsInline
           className="absolute top-0 left-0 w-full h-full object-cover"
         >
-          <source src="/images/nyc/IMG_9892.mp4" type="video/mp4" />
+          <source src="/images/nyc/test.mp4" type="video/mp4" />
         </video>
 
         {/* Text overlay */}
