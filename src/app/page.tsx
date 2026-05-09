@@ -127,8 +127,7 @@ export default function Home() {
         </div> */}
       </div>
 
-      <div className="w-full h-dvh overflow-hidden relative">
-        {/* Video background */}
+      {/* <div className="w-full h-dvh overflow-hidden relative">
         <video
           autoPlay
           loop
@@ -139,12 +138,12 @@ export default function Home() {
           <source src="/images/nyc/IMG_0102.mp4" type="video/mp4" />
         </video>
 
-        {/* <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-16 text-white">
+        <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-16 text-white">
           <h2 className="text-5xl md:text-7xl font-serif italic leading-tight text-center">
             cooper hewitt.
           </h2>
-        </div> */}
-      </div>
+        </div>
+      </div> */}
 
       <div className="w-full h-dvh overflow-hidden relative">
         <video
@@ -162,7 +161,7 @@ export default function Home() {
           <h2 className="text-5xl md:text-7xl font-serif italic leading-tight text-right">
             sonder
           </h2>
-          <p className="text-xs md:text-sm italic tracking-widest mt-2 w-full max-w-[500px] ml-auto text-right opacity-90">
+          <p className="text-xs italic tracking-widest mt-2 w-full max-w-[500px] ml-auto text-right opacity-90">
             the profound realization that every random passerby is living a life as vivid, complex,
             and chaotic as your own, filled with their own ambitions, relationships, and routines.
           </p>
