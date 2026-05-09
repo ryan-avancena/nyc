@@ -52,10 +52,9 @@ export default function Home() {
 
   return (
     <main className="h-dvh overflow-y-auto overflow-x-hidden bg-[#ebebeb] relative selection:bg-black selection:text-white">
-      <audio ref={audioRef} src="/images/nyc/ambience.m4a" loop />
+      {/* <audio ref={audioRef} src="/images/nyc/ambience.m4a" loop />
       <div className="fixed bottom-8 left-4 z-100 mix-blend-difference text-white font-sans text-xs tracking-widest uppercase flex flex-col items-end gap-3">
         <div className="flex items-center gap-3 opacity-50 hover:opacity-100 transition-opacity">
-          {/* <span>Vol</span> */}
           <input
             type="range"
             min="0"
@@ -72,7 +71,7 @@ export default function Home() {
         >
           {isPlaying ? "[ Pause Audio ]" : "[ Play Audio ]"}
         </button>
-      </div>
+      </div> */}
 
 
       {/* <div className="flex flex-col items-center"> */}
@@ -122,11 +121,11 @@ export default function Home() {
         </video>
 
         {/* Text overlay */}
-        <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-16 text-white right-8">
-          <h2 className="text-8xl font-serif italic leading-tight text-right">
+        <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-16 text-white">
+          <h2 className="text-5xl md:text-7xl font-serif italic leading-tight text-right">
             sonder
           </h2>
-          <p className="text-lg italic tracking-widest mt-2 w-[500px] ml-auto text-right">
+          <p className="text-xs md:text-sm italic tracking-widest mt-2 w-full max-w-[500px] ml-auto text-right opacity-90">
             the profound realization that every random passerby is living a life as vivid, complex,
             and chaotic as your own, filled with their own ambitions, relationships, and routines.
           </p>
